@@ -1,4 +1,4 @@
-package edu.packt.neuralnet;
+package edu.packt.neuralnet.Chapter1;
 
 public class NeuralNetTest {
 	public static void main(String[] args) {

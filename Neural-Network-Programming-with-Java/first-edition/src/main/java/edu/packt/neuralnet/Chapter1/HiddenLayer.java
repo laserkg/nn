@@ -1,4 +1,4 @@
-package edu.packt.neuralnet;
+package edu.packt.neuralnet.Chapter1;
 
 import java.util.ArrayList;
 import java.util.Arrays;

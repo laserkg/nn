@@ -1,4 +1,4 @@
-package edu.packt.neuralnet.Chapter1;
+package edu.packt.neuralnet.Chapter2;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -36,4 +36,10 @@ public class InputLayer extends Layer {
             n++;
         }
     }
+
+
+    public void setNumberOfNeuronsInLayer(int numberOfNeuronsInLayer) {
+        this.numberOfNeuronsInLayer = numberOfNeuronsInLayer + 1; //BIAS
+    }
+
 }
