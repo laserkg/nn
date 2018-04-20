@@ -2,6 +2,14 @@ package edu.packt.neuralnet.Chapter1;
 
 import java.util.ArrayList;
 
+/**
+ * 解释
+ * <p>
+ * 神经网络拓补结构在该类中是固定的：
+ * 输入层：有2个神经元
+ * 隐藏层：2层，每层3个神经元
+ * 输出层：1个神经元
+ */
 public class NeuralNet {
 
     private InputLayer inputLayer;
