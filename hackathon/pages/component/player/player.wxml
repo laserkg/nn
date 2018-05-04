@@ -1,0 +1,23 @@
+<view class="player">
+  <view>
+    <!-- <image class='player-image' src="{{imageUrl}}" mode="aspectFill" style="width: 100%;height: 100%;" />  -->
+    <image class='player-image' src="{{imageUrl}}" />
+    <view class="player-image-button" bindtap="playAudioController">
+      <image src="image/play.png" style="width: 100%;height: 100%;" wx:if="{{playStatus==0}}" />
+      <image src="image/pause.png" style="width: 100%;height: 100%;" wx:if="{{playStatus==1}}" />
+      <image src="image/stop.png" style="width: 100%;height: 100%;" wx:if="{{playStatus==2}}" />
+    </view>
+  </view>
+
+  <view class="player-audio">
+    <view class="player-audio-publisher">{{publisher}}</view>
+    <view class="player-audio-title">{{title}}</view>
+  </view>
+
+  <view>
+    <view class="player-audio-timeline">{{duration}}</view>
+    <view class="player-audio-timeline">{{playTime}}</view>
+  </view>
+  <!-- {{itemId}} {{title}} {{publisher}} {{audioUrl}} {{imageUrl}} -->
+</view>
+<!-- <slot></slot> -->

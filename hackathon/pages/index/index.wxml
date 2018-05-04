@@ -1,0 +1,39 @@
+<view class="channel-container">
+  <view class="channel-item {{channelActiveIndex == index?'channel-item-active':''}}" wx:for="{{channels}}" wx:for-item="channel" wx:key="channel_id" bindtap="onTapChannel" data-index="{{index}}">
+    <text class="channel-name">{{channel.name}}</text>
+  </view>
+</view>
+
+<!-- <view>
+  <player item-id="item-id" title="title" publisher="publisher" audio-url="http://ws.stream.qqmusic.qq.com/M500001VfvsJ21xFqb.mp3?guid=ffffffff82def4af4b12b3cd9337d5e7&uin=346897220&vkey=6292F51E1E384E061FF02C31F716658E5C81F5594D561F2E88B854E81CAAB7806D5E4F103E55D33C16F3FAC506D1AB172DE8600B37E43FAD&fromtag=46" image-url="http://img.sharedaka.com/Fkg6nUUzd2bnigSz7vgViBFXrwLq">aaa</player>
+</view> -->
+
+<view>
+  <block wx:for="{{lists[channelActiveIndex]}}" wx:key="item_id">
+    <template is="{{item.mode}}" data="{{item}}" />
+  </block>
+  <view class="loading">加载中...</view>
+</view>
+
+<view class="{{audioInfo.enableAudioPlayerView ==false? 'player-hiden' : ''}}">
+<view>
+<icon class="cancel" type="cancel" color="black" size="25" bindtap='playerExit'/>
+</view>
+  <view style="text-align: center;">
+    <audio style="text-align: left" src="{{audioInfo.currentItem.audio_url}}" poster="{{audioInfo.currentItem.image_url}}" name="{{audioInfo.currentItem.title}}" author="{{audioInfo.currentItem.publisher}}" action="{{audioAction}}" controls id="myAudio"></audio>
+  </view>
+</view>
+
+<template name="more_mode">
+  <view class="news-list-container" data-source="{{item.source}}" data-group-id="{{item.group_id}}" data-id="{{item.item_id}}">
+    <view class="news-list-box">
+      <image class='news-img' src='{{item.image_url}}'>
+        <image id="{{item.item_id}}" class="headset {{item.loading? 'rotating':''}}" src='../icons/audio_status_{{item.play_status}}.png' bindtap='audioController'></image>
+      </image>
+      <view class="news-text">
+        <view class='news-publisher'>{{item.publisher}}</view>
+        <view class='news-title'>{{item.title}}</view>
+      </view>
+    </view>
+  </view>
+</template>

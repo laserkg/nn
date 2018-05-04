@@ -1,0 +1,155 @@
+@import "./channel.wxss";
+
+.news-list-container {
+  padding: 32rpx 0;
+  margin: 0 30rpx;
+  border-bottom: 1rpx solid hsla(0, 0%, 87%, 0.6);
+}
+
+.news-list-box {
+  display: flex;
+  height: 200rpx;
+  /* padding: 20rpx 0; *//* border-bottom: 1px solid #d3d3d3; */
+  overflow: hidden;
+}
+
+.news-img {
+  width: 200rpx;
+  height: 75%;
+  margin: 20rpx;
+  position: relative;
+}
+
+.headset {
+  position: absolute;
+  left: 10rpx;
+  bottom: 10rpx;
+  width: 50rpx;
+  height: 50rpx;
+  border: 1px solid #434343;
+  border-radius: 50%;
+  background: white;
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.rotating {
+  animation: rotate infinite 1s;
+  -webkit-animation: rotate 1s infinite linear;
+}
+
+.news-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 0 2rpx;
+}
+
+.news-publisher {
+  font-size: 28rpx;
+  color: #f65959;
+  padding: 0 2rpx;
+}
+
+.news-title {
+  font-size: 38rpx;
+  color: #222;
+  line-height: 50rpx;
+  font-weight: 400rpx;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  padding: 0 2rpx;
+}
+
+.news-summaray {
+  color: darkgray;
+  font-size: 28rpx;
+  overflow: hidden;
+  padding: 0 2rpx;
+}
+
+.player {
+  width: 100%;
+  border-bottom: 2rpx solid #ccc;
+  text-align: center;
+  color: white;
+  height: 180rpx;
+  bottom: 0;
+  /* line-height: 88rpx; */
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  position: fixed;
+  background: #181818;
+}
+
+.player-mini-btn {
+  width: 60rpx;
+  height: 60rpx;
+  margin: 20rpx;
+  position: relative;
+  border: 1px solid #434343;
+  border-radius: 50%;
+  background: white;
+}
+
+.image-container {
+  margin-top: 12rpx;
+  text-align: center;
+}
+
+.more_mode_image {
+  display: inline-block;
+  width: 32%;
+  padding: 0 2rpx;
+}
+
+.source {
+  display: inline-block;
+  font-size: 24rpx;
+  color: #999;
+  margin-right: 10rpx;
+  line-height: 24rpx;
+}
+
+.hot {
+  display: inline-block;
+  font-size: 18rpx;
+  color: #f85959;
+  border: 1px solid rgba(248, 89, 89, 0.5);
+  border-radius: 4rpx;
+  width: 24rpx;
+  line-height: 24rpx;
+  text-align: center;
+  margin-top: -1rpx;
+  margin-right: 5rpx;
+}
+
+/* 元素选择器 */
+audio {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  overflow: hidden;
+  word-break: break-all;
+}
+
+.cancel {
+  position: fixed;
+  bottom: 40rpx;
+  right: 60rpx;
+  height: 50rpx;
+  width: 40rpx;
+  z-index: 2;
+}
+
+.player-hiden {
+  visibility: hidden;
+}
